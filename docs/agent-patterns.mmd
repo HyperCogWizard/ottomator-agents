@@ -1,0 +1,62 @@
+graph LR
+    subgraph "MCP Agent Pattern"
+        A[MCP Client] <--> B[MCP Server]
+        B <--> C[Tool Registry]
+        C --> D[File System Tools]
+        C --> E[Database Tools]
+        C --> F[API Tools]
+        C --> G[Computation Tools]
+        
+        A --> H[Agent Core]
+        H --> I[LLM Interface]
+        H --> J[Context Manager]
+        H --> K[Response Generator]
+    end
+    
+    subgraph "Pydantic AI Pattern"
+        L[Agent Definition] --> M[Type Schema]
+        M --> N[Input Validation]
+        N --> O[LLM Processing]
+        O --> P[Output Validation]
+        P --> Q[Structured Response]
+        
+        M --> R[Tool Integration]
+        R --> S[Function Schemas]
+        S --> T[Parameter Validation]
+        T --> O
+    end
+    
+    subgraph "n8n Workflow Pattern"
+        U[Visual Workflow] --> V[Node Network]
+        V --> W[Trigger Nodes]
+        V --> X[Processing Nodes] 
+        V --> Y[Action Nodes]
+        
+        W --> Z[Webhook/Schedule/Event]
+        X --> AA[Transform/AI/Logic]
+        Y --> BB[API/Database/Notify]
+    end
+    
+    subgraph "Integration Layer"
+        CC[Cross-Agent Communication]
+        DD[Shared Context Store]
+        EE[Tool Marketplace]
+        FF[Event Bus]
+    end
+    
+    H <--> CC
+    Q <--> CC
+    BB <--> CC
+    
+    J <--> DD
+    P <--> DD
+    AA <--> DD
+    
+    C <--> EE
+    R <--> EE
+    Y <--> EE
+    
+    style A fill:#e3f2fd
+    style L fill:#e8f5e8
+    style U fill:#fff3e0
+    style CC fill:#f3e5f5

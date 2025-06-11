@@ -1,0 +1,33 @@
+stateDiagram-v2
+    [*] --> InfoGathering: User Query
+    
+    InfoGathering --> Routing: Context Analysis
+    
+    Routing --> ParallelProcessing: Decompose Task
+    
+    state ParallelProcessing {
+        [*] --> SpecialistA
+        [*] --> SpecialistB  
+        [*] --> SpecialistC
+        
+        SpecialistA --> [*]: Result A
+        SpecialistB --> [*]: Result B
+        SpecialistC --> [*]: Result C
+    }
+    
+    ParallelProcessing --> Synthesis: Aggregate Results
+    Synthesis --> Validation: Quality Check
+    Validation --> Response: Generate Output
+    Validation --> Routing: Iterate if Needed
+    
+    Response --> [*]: Complete
+    
+    note right of ParallelProcessing
+        Emergent cognitive patterns through
+        parallel specialist processing
+    end note
+    
+    note left of Synthesis
+        Neural-symbolic integration
+        combining distributed outputs
+    end note

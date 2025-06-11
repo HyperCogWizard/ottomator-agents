@@ -1,0 +1,34 @@
+sequenceDiagram
+    participant U as User
+    participant P as Platform
+    participant A as Agent
+    participant T as Tools
+    participant LLM as Language Model
+    participant S as Storage
+    
+    U->>P: Submit Query
+    P->>A: Initialize Agent Session
+    A->>S: Load Context/History
+    S-->>A: Context Data
+    
+    A->>T: Discover Available Tools
+    T-->>A: Tool Registry
+    
+    A->>LLM: Process Query with Context
+    LLM-->>A: Reasoning + Tool Calls
+    
+    loop Tool Execution
+        A->>T: Execute Tool
+        T-->>A: Tool Result
+    end
+    
+    A->>LLM: Generate Final Response
+    LLM-->>A: Structured Output
+    
+    A->>S: Store Session Data
+    A-->>P: Response + Metadata
+    P-->>U: Final Response
+    
+    Note over A,LLM: Recursive attention allocation
+    Note over T: Adaptive tool selection
+    Note over S: Context persistence
