@@ -1,0 +1,52 @@
+graph TD
+    A[Live Agent Studio Platform] --> B[Agent Ecosystem]
+    B --> C[MCP Agents]
+    B --> D[Pydantic AI Agents]  
+    B --> E[n8n Workflow Agents]
+    B --> F[Hybrid Agents]
+    
+    C --> C1[Tool Integration Layer]
+    C --> C2[Server Communication]
+    C --> C3[Context Management]
+    
+    D --> D1[Type-Safe Definitions]
+    D --> D2[Structured Reasoning]
+    D --> D3[Validation Layers]
+    
+    E --> E1[Visual Workflows]
+    E --> E2[API Orchestration]
+    E --> E3[Data Processing]
+    
+    F --> F1[Multi-Paradigm Integration]
+    F --> F2[Cross-Agent Communication]
+    F --> F3[Emergent Behaviors]
+    
+    C1 --> G[Shared Infrastructure]
+    D1 --> G
+    E1 --> G
+    F1 --> G
+    
+    G --> H[LLM Providers]
+    G --> I[Vector Databases]
+    G --> J[External APIs]
+    G --> K[Storage Systems]
+    
+    H --> H1[OpenAI]
+    H --> H2[Anthropic]
+    H --> H3[Local Models]
+    
+    I --> I1[ChromaDB]
+    I --> I2[Pinecone]
+    I --> I3[Embedded Vectors]
+    
+    J --> J1[Web APIs]
+    J --> J2[Database APIs]
+    J --> J3[Specialized Tools]
+    
+    K --> K1[Supabase]
+    K --> K2[PostgreSQL]
+    K --> K3[File Storage]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style G fill:#e8f5e8

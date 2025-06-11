@@ -1,0 +1,50 @@
+graph TD
+    subgraph "Agent Communication Layer"
+        A[Agent A] --> E[Event Bus]
+        B[Agent B] --> E
+        C[Agent C] --> E
+        
+        E --> F[Message Routing]
+        F --> G[Context Sharing]
+        F --> H[Tool Delegation]
+        F --> I[Result Aggregation]
+    end
+    
+    subgraph "Shared Cognitive Infrastructure"
+        G --> J[Shared Memory]
+        H --> K[Tool Marketplace]
+        I --> L[Synthesis Engine]
+        
+        J --> M[Vector Embeddings]
+        J --> N[Graph Knowledge]
+        J --> O[Temporal Context]
+    end
+    
+    subgraph "Neural-Symbolic Integration Points"
+        P[Type System Boundaries]
+        Q[Tool Interface Layers]
+        R[Workflow Orchestration]
+        S[Knowledge Representation]
+    end
+    
+    subgraph "Emergent Properties"
+        T[Cross-Modal Learning]
+        U[Tool Ecosystem Evolution]
+        V[Workflow Pattern Emergence]
+        W[Cognitive Load Balancing]
+    end
+    
+    L --> P
+    K --> Q
+    E --> R
+    M --> S
+    
+    P --> T
+    Q --> U
+    R --> V
+    S --> W
+    
+    style E fill:#e1f5fe
+    style J fill:#e8f5e8
+    style P fill:#fff3e0
+    style T fill:#f3e5f5

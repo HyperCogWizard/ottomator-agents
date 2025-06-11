@@ -10,6 +10,19 @@ This platform is still in beta – expect longer response times under load, a ra
 
 This repository contains the source code/workflow JSON for all the agents on the Live Agent Studio! Every agent being added to the platform is currently be open sourced here so we can not only create a curated collection of cutting-edge agents together as a community, but also learn from one another!
 
+## 📚 Architecture Documentation
+
+For a comprehensive understanding of the agent ecosystem and its emergent cognitive patterns, see our detailed architecture documentation:
+
+**[→ Comprehensive Architecture Documentation](docs/architecture.md)**
+
+This documentation includes:
+- High-level system overview with Mermaid diagrams
+- Agent pattern taxonomy (MCP, Pydantic AI, n8n workflows)
+- Data flow and signal propagation pathways
+- Neural-symbolic integration points
+- Emergent cognitive behaviors and optimization vectors
+
 ## Tokens
 
 Most agents on the Live Agent Studio cost tokens to use, which are purchasable on the platform. However, when you first sign in you are given some tokens to start so you can use the agents free of charge! The biggest reason agents cost tokens is that we pay for the LLM usage since we host all the agents developed by you and the rest of the community!
